@@ -30,6 +30,16 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
+    implementation ("com.fasterxml.jackson.core:jackson-databind") // 추가
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
+    // JSON 처리 라이브러리 (json-simple)
+    implementation("com.googlecode.json-simple:json-simple:1.1.1")
+
+    // Spring 의존성 (Kakao API 키를 사용하는 부분에서 필요)
+    implementation("org.springframework.boot:spring-boot-starter")
+
+    // Kotlin 관련 의존성
+    implementation("org.jetbrains.kotlin:kotlin-stdlib")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     compileOnly("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
