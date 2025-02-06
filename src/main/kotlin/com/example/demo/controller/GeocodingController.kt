@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RestController
 
 
 @RestController
-@RequestMapping("/api/kakao")
+@RequestMapping("/api/geocod")
 class GeocodingController(private val geocodingService: GeocodingService) {
 
     // 주소 -> 경도, 위도 변환 API
-    @GetMapping("/address-to-kakao")
+    @GetMapping("/address-to-geocod")
     fun addressToCoordinates(@RequestParam address: String): Map<String, Double?> {
         val (latitude, longitude) = geocodingService.getCoordinates(address) ?: return mapOf("error" to null)
         return mapOf("latitude" to latitude, "longitude" to longitude)
